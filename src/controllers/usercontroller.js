@@ -50,6 +50,7 @@ const createuser = asyncwarapper(async (req, res, next) => {
         Full_Name,
         Email,
         Password: hashedPassword,
+        Avatar: req.file.filename,
     });
 
     const accesstoken = await generateAccessToken({
